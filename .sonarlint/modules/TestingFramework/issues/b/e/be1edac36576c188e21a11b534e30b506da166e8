@@ -1,0 +1,27 @@
+
+{squid:S3008"URename this field "FlyingFrom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãØó§ıÿÿÿÿ8¬¥îµ+Hå
+wsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(İœ£ßşÿÿÿÿHÔ
+’"squid:ClassVariableVisibilityCheck"UMake Departing a static final constant or non-public and provide accessors if needed.(ˆò´âüÿÿÿÿ8¬¥îµ+HÚ
+"squid:ClassVariableVisibilityCheck	"UMake Returning a static final constant or non-public and provide accessors if needed.(…İÊÙ8¬¥îµ+Hæ
+Qsquid:S1444
+"+Make this "public static Rooms" field final(ëúÑûşÿÿÿÿ8¬¥îµ+HÙ
+Usquid:S1444"/Make this "public static Departing" field final(ˆò´âüÿÿÿÿ8¬¥îµ+Há
+Š"squid:ClassVariableVisibilityCheck"RMake Adults a static final constant or non-public and provide accessors if needed.(ç«ÌÆ8¬¥îµ+HÑ
+vsquid:S3008
+"PRename this field "Rooms" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëúÑûşÿÿÿÿ8¬¥îµ+Hä
+usquid:S3008	"TRename this field "Returning" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…İÊÙ8¬¥îµ+H×
+ysquid:S3008"SRename this field "Children" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ˜‰øÿÿÿÿ8¬¥îµ+Hã
+Œ"squid:ClassVariableVisibilityCheck"TMake FlyingTo a static final constant or non-public and provide accessors if needed.(œóË8¬¥îµ+Hâ
+[squid:S1118":Add a private constructor to hide the implicit public one.( ı±¨8¬¥îµ+HÕ
+“"squid:ClassVariableVisibilityCheck"VMake FlyingFrom a static final constant or non-public and provide accessors if needed.(ãØó§ıÿÿÿÿ8¬¥îµ+HØ
+"squid:ClassVariableVisibilityCheck
+"QMake Rooms a static final constant or non-public and provide accessors if needed.(ëúÑûşÿÿÿÿ8¬¥îµ+HÖ
+tsquid:S3008"SRename this field "FlyingTo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œóË8¬¥îµ+HÜ
+rsquid:S3008"QRename this field "Adults" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç«ÌÆ8¬¥îµ+HÛ
+Psquid:S1444	"/Make this "public static Returning" field final(…İÊÙ8¬¥îµ+Hç
+Msquid:S1444",Make this "public static Adults" field final(ç«ÌÆ8¬¥îµ+Hİ
+‘"squid:ClassVariableVisibilityCheck"TMake Children a static final constant or non-public and provide accessors if needed.(Ÿ˜‰øÿÿÿÿ8¬¥îµ+HÓ
+zsquid:S3008"TRename this field "Departing" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆò´âüÿÿÿÿ8¬¥îµ+Hà
+Osquid:S1444".Make this "public static FlyingTo" field final(œóË8¬¥îµ+HÒ
+Tsquid:S1444".Make this "public static Children" field final(Ÿ˜‰øÿÿÿÿ8¬¥îµ+Hß
+Vsquid:S1444"0Make this "public static FlyingFrom" field final(ãØó§ıÿÿÿÿ8¬¥îµ+HŞ
