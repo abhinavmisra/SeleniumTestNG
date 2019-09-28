@@ -1,11 +1,10 @@
 package com.library.function;
 
-import java.io.File;
-
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.io.File;
 
 
 public class DriverClass {
@@ -17,21 +16,16 @@ public class DriverClass {
 	
 	public void setupScenario(){
 		String paramBrowser = System.getProperty("browser");
-		if(paramBrowser.equalsIgnoreCase("InternetExplorer")){
-		File file = new File("C:/Program Files/IEDriverServer_Win32_3.0.0/IEDriverServer.exe");
-		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-		DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-		// setting a clean session with clean cache
-		caps.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
-		browserName = caps.getBrowserName().toString();
-		browserVersion = caps.getVersion().toString();
-		// starting new clean IE
-		driver = new InternetExplorerDriver(caps);
-		}else if(paramBrowser.equalsIgnoreCase("firefox")){
+		if(paramBrowser.equalsIgnoreCase("firefox")){
 		// starting new clean Firefox
-		File file = new File("C:/Program Files/geckodriver-v0.11.1-win64/geckodriver.exe");
+		File file = new File("D:\\selenium driver\\geckodriver-v0.25.0-win64\\geckodriver.exe");
 		System.setProperty("webdriver.gecko.driver", file.getAbsolutePath());		
 		driver = new FirefoxDriver();
+		}
+		else if(paramBrowser.equalsIgnoreCase("chrome")) {
+			String exePath = "D:\\selenium driver\\chromedriver_win32\\chromedriver.exe";
+			 System.setProperty("webdriver.chrome.driver", exePath);
+			 driver = new ChromeDriver();
 		}
 		driver.manage().window().maximize(); 
 }

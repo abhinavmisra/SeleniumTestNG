@@ -1,32 +1,5 @@
 package com.library.function;
 
-	import java.awt.Rectangle;
-	import java.awt.Robot;
-	import java.awt.Toolkit;
-	import java.awt.image.BufferedImage;
-	import java.io.IOException;
-	import java.sql.Connection;
-	import java.sql.DriverManager;
-	import java.sql.ResultSet;
-	import java.sql.SQLException;
-	import java.sql.Statement;
-	import java.text.DateFormat;
-	import java.text.ParseException;
-	import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-	import java.util.Random;
-	import java.util.Set;
-	import java.util.concurrent.TimeUnit;
-import java.util.regex.Pattern;
-
-import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -34,46 +7,37 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
-	import org.openqa.selenium.Alert;
-	import org.openqa.selenium.By;
-	import org.openqa.selenium.JavascriptExecutor;
-	import org.openqa.selenium.NoSuchElementException;
-	import org.openqa.selenium.OutputType;
-	import org.openqa.selenium.TakesScreenshot;
-	import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-	import org.openqa.selenium.support.ui.ExpectedCondition;
-	import org.openqa.selenium.support.ui.ExpectedConditions;
-	import org.openqa.selenium.support.ui.Select;
-	import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
-	import org.w3c.dom.*;
-	import org.w3c.dom.Document;
-	import org.w3c.dom.Element;
-	import org.w3c.dom.Node;
-	import org.w3c.dom.NodeList;
-	import org.xml.sax.SAXException;
-	import org.xml.sax.SAXParseException;
-import com.gargoylesoftware.htmlunit.javascript.host.html.HTMLCollection;
-import com.sun.jna.platform.unix.X11.Screen;
-
-import java.io.File;
-import java.io.FileInputStream;
-
-import javax.imageio.ImageIO;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.sql.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.*;
 
 	// TODO: Auto-generated Javadoc
 	/**
@@ -698,7 +662,7 @@ import javax.xml.transform.TransformerFactory;
 		 * @throws IOException
 		 *             Signals that an I/O exception has occurred.
 		 */
-		private void TakeAScreenshot(String testName, String screenshotName, String browserName) throws IOException {
+		/*private void TakeAScreenshot(String testName, String screenshotName, String browserName) throws IOException {
 			File scrFile = ((TakesScreenshot) DriverClass.driver).getScreenshotAs(OutputType.FILE);
 			testName = testName.replaceAll("[^\\p{L}\\p{Z}]", "");
 			File folders = new File(System.getProperty("user.dir").toString() + "\\target\\Screenshots\\" + testName);
@@ -713,7 +677,7 @@ import javax.xml.transform.TransformerFactory;
 					+ screenshotName + "_" + browserName + ".png";
 			FileUtils.copyFile(scrFile, new File(DestFileName));
 
-		}
+		}*/
 
 		/**
 		 * Take A screenshot with taskbar/timestamp.
@@ -725,7 +689,7 @@ import javax.xml.transform.TransformerFactory;
 		 * @throws Exception
 		 *             Signals that an I/O exception has occurred.
 		 */
-		public void TakeAScreenshotWithTime(String valueTakeScreenshot, String ScenarioName) throws Exception {
+		/*public void TakeAScreenshotWithTime(String valueTakeScreenshot, String ScenarioName) throws Exception {
 			if (valueTakeScreenshot.equalsIgnoreCase("Yes") | valueTakeScreenshot.equalsIgnoreCase("Enable")) {
 				SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddhhmmssa");
 				Calendar now = Calendar.getInstance();
@@ -746,7 +710,7 @@ import javax.xml.transform.TransformerFactory;
 				ImageIO.write(screenShot, "JPG", new File(DestFileName));
 				System.out.println(formatter.format(now.getTime()));
 			}
-		}
+		}*/
 
 		/**
 		 * Clear The Screenshot Directory.
@@ -756,7 +720,7 @@ import javax.xml.transform.TransformerFactory;
 		 * @throws Exception
 		 *             Signals that an I/O exception has occurred.
 		 */
-		public void CleartheDirectory(String ScenarioName) throws Exception {
+		/*public void CleartheDirectory(String ScenarioName) throws Exception {
 			File folders = new File(System.getProperty("user.dir").toString() + "\\target\\Screenshots\\" + ScenarioName);
 			if (!folders.exists()) {
 				if (folders.mkdirs()) {
@@ -766,7 +730,7 @@ import javax.xml.transform.TransformerFactory;
 				}
 			}
 			FileUtils.cleanDirectory(folders);
-		}
+		}*/
 
 		/**
 		 * Select by label.
@@ -997,10 +961,6 @@ import javax.xml.transform.TransformerFactory;
 		*//**
 		 * Sikuli click action.
 		 *
-		 * @param arg
-		 *            the arg
-		 * @param strings
-		 *            the strings
 		 *//*
 		public void sikuliClickAction(String arg, String... strings) {
 

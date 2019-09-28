@@ -1,5 +1,6 @@
 package com.objectLocators.part1;
 
+
 import org.openqa.selenium.By;
 
 public class Locators1 {
@@ -10,4 +11,5 @@ public class Locators1 {
 	public static By Rooms = By.id("package-rooms");
 	public static By Adults = By.id("package-1-adults");
 	public static By Children = By.id("package-1-children");
+
 }

@@ -14,22 +14,16 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
 	<junit.version>4.12</junit.version>
-	<maven.compiler.version>3.6.0</maven.compiler.version>
+	<maven.compiler.version>3.8.1</maven.compiler.version>
   </properties>
 
   <dependencies>
     <dependency>
 		<groupId>org.seleniumhq.selenium</groupId>
 		<artifactId>selenium-java</artifactId>
-		<version>3.2.0</version>
+		<version>3.141.59</version>
 		<scope>test</scope>
 	</dependency>
-	
-	<dependency>
-    	<groupId>org.openqa.selenium.server</groupId>
-    	<artifactId>selenium-server-coreless</artifactId>
-    	<version>1.0-20081010.060147</version>
-	</dependency>	
 	
 	<dependency>
 		<groupId>junit</groupId>
@@ -37,32 +31,40 @@
 		<version>${junit.version}</version>
 		<scope>test</scope>
 	</dependency>
-	
-	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+	  <dependency>
+		  <groupId>org.apache.poi</groupId>
+		  <artifactId>poi</artifactId>
+		  <version>3.9</version>
+	  </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 	<dependency>
 		<groupId>org.apache.poi</groupId>
 		<artifactId>poi-ooxml</artifactId>
 		<version>3.9</version>
 	</dependency>
-	
-	<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-	<dependency>
-    	<groupId>com.google.guava</groupId>
-    	<artifactId>guava</artifactId>
-    	<version>21.0</version>
-	</dependency>
-	
-	<dependency>
+
+	  <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+	  <dependency>
+		  <groupId>com.google.guava</groupId>
+		  <artifactId>guava</artifactId>
+		  <version>28.0-jre</version>
+	  </dependency>
+
+
+	  <dependency>
 		<groupId>org.apache.pdfbox</groupId>
 		<artifactId>pdfbox</artifactId>
-		<version>2.0.0</version>
+		<version>2.0.16</version>
 	</dependency>
 	
 	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 	<dependency>
     	<groupId>org.testng</groupId>
     	<artifactId>testng</artifactId>
-    	<version>6.10</version>
+    	<version>7.0.0</version>
 	</dependency>
 
 
@@ -85,23 +87,23 @@
 	<dependency>
     	<groupId>org.apache.logging.log4j</groupId>
     	<artifactId>log4j-core</artifactId>
-    	<version>2.7</version>
+    	<version>2.12.0</version>
 	</dependency>
 	
 	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 	<dependency>
     	<groupId>org.apache.logging.log4j</groupId>
     	<artifactId>log4j-api</artifactId>
-    	<version>2.7</version>
+    	<version>2.12.0</version>
 	</dependency>
 	
 	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
 	<dependency>
     	<groupId>org.apache.logging.log4j</groupId>
     	<artifactId>log4j-slf4j-impl</artifactId>
-    	<version>2.7</version>
+    	<version>2.12.0</version>
 	</dependency>
-	
+
 	<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
 	<dependency>
     	<groupId>com.relevantcodes</groupId>
@@ -114,6 +116,12 @@
     	<artifactId>xml-apis</artifactId>
     	<version>1.4.01</version>
 	</dependency>
+	  <dependency>
+		  <groupId>org.seleniumhq.selenium</groupId>
+		  <artifactId>selenium-api</artifactId>
+		  <version>3.141.59</version>
+		  <scope>compile</scope>
+	  </dependency>
   </dependencies>
   
   <build>
@@ -123,7 +131,6 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven.compiler.version}</version>
 				<configuration>
-					<forkCount>0</forkCount>
 					<encoding>UTF-8</encoding>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
